@@ -1,31 +1,28 @@
-import React from "react";
-
 import {
   Header,
   AboutUs,
   Menu,
   Chef,
-  Intro,
-  Laurels,
-  Gallery,
+  Video,
   FindUs,
   Footer,
-} from "./container";
-import { Navbar } from "./components";
+} from "./landing_page";
+import { Navbar } from "./landing_page";
+import { LanguageProvider } from "./language_context";
 import "./App.css";
 
 const App = () => (
   <div>
-    <Navbar />
-    <Header />
-    <AboutUs />
-    <Menu />
-    <Chef />
-    <Intro />
-    <Laurels />
-    <Gallery />
-    <FindUs />
-    <Footer />
+    <LanguageProvider>
+      <Navbar />
+      <Header />
+      <Video />
+      <Menu />
+      <Chef />
+      <AboutUs />
+      <FindUs />
+      <Footer />
+    </LanguageProvider>
   </div>
 );
 
